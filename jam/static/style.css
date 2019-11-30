@@ -2,11 +2,12 @@
 
 *{
     font-family: 'Nanum';
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 
 body{
     width: 100%;
+    background: #FFF593;
 }
 
 header{
@@ -16,6 +17,8 @@ header{
     -webkit-justify-content: space-between;
     display: flex;
     justify-content: space-between;
+    padding: 20px;
+    background: inherit;
 }
 
 

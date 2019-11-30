@@ -34,7 +34,6 @@ class Jam(models.Model):
     project = models.ForeignKey(Project, on_delete = models.CASCADE, related_name='jams')
     user = models.ForeignKey(User, on_delete = models.CASCADE)
     content = models.TextField()
-    jjam = models.ForeignKey('self', on_delete = models.CASCADE, null=True)
     file = models.FileField(upload_to="music", null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

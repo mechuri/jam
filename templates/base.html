@@ -12,14 +12,14 @@
     <title>꿀잼</title>
   </head>
   <body>
-    <hearder>
+    <header>
         <a class='logo' href="/"><img class='logo-img' src="{% static 'honeyjam_logo.jpg' %}" alt="꿀잼"></a>
         {% if user.is_active %}
-        <a href="#" class='signIn-Out'>Logout</a>
+        <a href="{% url 'account_logout' %}" class='signIn-Out'>Logout</a>
         {% else %}
-        <a class='signIn-Out' href="{% url 'login' %}">Sign In</a>
+        <a class='signIn-Out' href="{% url 'account_login' %}">Sign In</a>
         {% endif %}
-    </hearder>
+    </header>
     {% block content %}
     
     {% endblock %}

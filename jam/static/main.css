@@ -1,0 +1,48 @@
+.main-wrap {
+    padding: 30px;
+    margin: 0 auto;
+}
+
+.create-btn {
+    margin: 0 5vh;
+    padding: 1vh;
+}
+
+
+.item-wrap {
+    overflow: hidden;
+}
+
+
+.item {
+    width: 50vh;
+    height: auto;
+    margin: 5vh;
+    padding: 1vh;
+    display: inline-block;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.item .item-text a:hover {
+    text-decoration: None;
+    color: rgba(253, 192, 5, 1);
+}
+
+.item .item-text a{
+    background: None;
+    font-size: 1.2em;
+    text-decoration: None;
+    color: black;
+    text-align: left;
+}
+
+.item-img {
+
+}
+
+.item-img img{
+    width: 94%;
+    height: auto;
+}
+

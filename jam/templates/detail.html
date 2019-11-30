@@ -2,28 +2,52 @@
 {% load staticfiles %}
 {% block content %}
 
-<p>프로젝트 디테일 페이지</p>
+<link rel="stylesheet" href="{% static 'detail.css' %}">
 
-<a href="{% url 'jam:show' %}">목록으로 가기</a>
+<!-- <p>프로젝트 디테일 페이지</p> -->
 
-<p>{{project.user}}의 프로젝트 </p>
-<p>{{project.inst}} </p>
-<p>{{project.content}} </p>
+<a href="{% url 'jam:create_jam' project.id %}" class="btn btn-warning join">프로젝트 참여하기</a>
+<div class="detail-wrap">
+    <h1>[{{project.user}}]의 프로젝트</h1>
+    <div class="detail-wrap-inst">
+        <br>
+        <h2>사용 악기</h2>
+        <h2 class='tag'>
+            #{{project.inst}}
+        </h2>
+    </div>
+    
+    <div class="detail-wrap-content">
+        {{project.content}}
+    </div>
+        
+    
+<!-- 오디오 재생 -->
+    <div class="detail-audio">
+        <audio src="{{ project.file.url }}" controls></audio>
+    </div>
+    
+    
+    
+    
+    <div class="detail-jjam">
+        
+        {% for jam in project.jams.all %}
+        <div class="jjam-info">
+            제작자: {{ jam.user }} <br>
+            악기: {{ jam.inst }} <br>
+            간단설명: {{ jam.content }} <br> 
+        <div class="detail-audio">
+        <audio src="{{ jam.file.url }}" controls></audio>
+    </div>
+        </div>
+            {% empty %}
+            <br><p>아직 아무도 참여하지 않았어요!</p>
+        {% endfor %}
+    </div>
+    
+</div>
 
-<a href="{% url 'jam:create_jam' project.id %}" class="btn btn-warning">프로젝트 참여하기</a>
 
-<p> ---------------- </p>
-
-{% for jam in project.jams.all %}
-    제작자: {{ jam.user }} <br>
-    악기:{{ jam.inst }} <br>
-    간단설명: {{ jam.content }} <br> 
-    <a href="{% url 'jam:create_jjam' project.id jam.id %}" class="btn btn-warning">프로젝트 참여하기</a><br>
-
--------------------------<br>
-
-{% empty %}
-    <p>아직 입력을 하지 않았습니다!</p>
-{% endfor %}
 
 {% endblock %}

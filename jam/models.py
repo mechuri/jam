@@ -9,7 +9,7 @@ class Project(models.Model):
         ('drum', 'drum'),
         ('elec', 'elec'),
         ('piano', 'piano'),
-        ('base', 'base'),
+        ('bass', 'bass'),
         ('other', 'other'),
     )
     
@@ -27,7 +27,7 @@ class Jam(models.Model):
         ('drum', 'drum'),
         ('elec', 'elec'),
         ('piano', 'piano'),
-        ('base', 'base'),
+        ('bass', 'bass'),
         ('other', 'other'),
     )
     inst = models.CharField(max_length=20, choices=INST_CHOICES)

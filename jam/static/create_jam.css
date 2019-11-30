@@ -8,6 +8,14 @@ h2, h3 {
     color: #666;
 }
 
+h2{
+    font-size: 2em;
+}
+
+h3{
+    font-size: 1.2em;
+}
+
 .textarea_field {
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -18,6 +26,11 @@ h2, h3 {
     height: 160px;
 }
 
-.btn .btn-warning {
+.submit-btn{
+    margin: 10px 0px 0px 0px;
+    float: right;
+}
+
+.btn btn-warning {
     display: block;
 }

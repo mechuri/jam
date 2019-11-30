@@ -13,7 +13,7 @@ h2{
 }
 
 h3{
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .textarea_field {
@@ -24,4 +24,9 @@ h3{
     font-size: 14px;
     width: 80%;
     height: 160px;
+}
+
+.submit-btn{
+    margin: 10px 0px 0px 0px;
+    float: right;
 }

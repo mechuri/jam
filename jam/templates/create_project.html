@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'create_project.css' %}">
+
+<div class="content-wrap">
+
+    <h2>프로젝트 생성 페이지입니다</h2>
+    <h3>사용 악기</h3>
+
+    <form action="{% url 'jam:create_project' %}" method="POST" enctype = "multipart/form-data">
+        {% csrf_token %} 
+        <select name="inst">
+            <option value="drum" selected="selected">드럼</option>
+            <option value="base">베이스</option>
+            <option value="elec">일렉기타</option>
+            <option value="piano">피아노</option>
+            <option value="vocal">보컬</option>
+            <option value="other">그 외</option>
+        </select><br><br>
+
+        <h2>간단소개</h2>
+        <textarea class="textarea_field" placeholder="자신의 음악을 간단히 소개하세요." name="content"></textarea><br>
+
+        <h2>음악 파일</h2>
+        <input type="file" name="file">
+
+
+        <input type="submit" value="등록하기">
+    </form>
+
+
+    {% endblock %}
+
+    
+</div>

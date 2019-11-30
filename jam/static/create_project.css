@@ -1,0 +1,19 @@
+.content-wrap {
+    position: relative;
+    margin: 0 auto;
+    padding: 10px 30px 30px;
+}
+
+h2, h3 {
+    color: #666;
+}
+
+.textarea_field {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 3px 0;
+    font-size: 14px;
+    width: 80%;
+    height: 160px;
+}

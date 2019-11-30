@@ -5,7 +5,8 @@
 
 .create-btn {
     margin: 0 5vh;
-    padding: 1vh;
+    padding: 2.2vh;
+    
 }
 
 
@@ -17,7 +18,7 @@
 .item {
     width: 50vh;
     height: auto;
-    margin: 5vh;
+    margin: 1vh 5vh;
     padding: 1vh;
     display: inline-block;
     justify-content: space-around;
@@ -42,7 +43,7 @@
 }
 
 .item-img img{
-    width: 94%;
+    width: 100%;
     height: auto;
 }
 
